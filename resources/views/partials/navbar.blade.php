@@ -5,21 +5,29 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === 'Home') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === 'Gallery') ? 'active' : '' }}" href="/gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link {{ ($title === 'Contacts') ? 'active' : '' }}" href="/contacts">Contact Us</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav mas-auto">
         <li class="nav-item">
-          <a class="nav-link {{ ($title === 'Home') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="{{route ('login')}}">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{ ($title === 'Gallery') ? 'active' : '' }}" href="/gallery">Gallery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {{ ($title === 'Contacts') ? 'active' : '' }}" href="/contacts">Contact Us</a>
+          <a class="nav-link" href="{{route ('register')}}">Register</a>
         </li>
 
-    </ul>
+      </ul>
     </div>
   </div>
 </nav>
